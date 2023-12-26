@@ -27,7 +27,7 @@ https://www.metacpan.org
 
 * cpan
 
-* cpanm
+* cpanm Dist::Module
 
 * manually install through make and make install
 
@@ -39,12 +39,13 @@ perldoc -l Dist::Module
 
 ### Uninstall modules
 
-cpanm --uninstall Acme::Dot
+cpanm --uninstall Dist::Module
 
 # metacpan.org
 * check availability of perl modules
 
 * read manual
+
 # Tips: XS module(s)
 ``` perl
 use Math::Vector::Real; # Math::Vector::Real::XS
@@ -82,6 +83,20 @@ while (@ARGV) {
     say shift @ARGV;
 }
 ```
+
+# different ways of applying delimiters
+$ cat paths.txt
+
+#### leaning toothpick syndrome
+$ perl -ne 'print if /\/home\/ram\//' paths.txt
+
+#### using a different delimiter makes it more readable here
+$ perl -ne 'print if m{/home/ram/}' paths.txt
+
+$ perl -ne 'print if !m#/home/ram/#' paths.txt
+
+---
+taken from https://learnbyexample.github.io/learn_perl_oneliners/line-processing.html
 
 # "Context"
 ``` perl
