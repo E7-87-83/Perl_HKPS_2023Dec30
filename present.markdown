@@ -119,11 +119,15 @@ _Regular Expression
 
 # Websites Recommended
 
+https://perldoc.perl.org/
+
 https://metacpan.org/
 
 https://learnbyexample.github.io/learn_perl_oneliners/
 
 https://www.perlmonks.org
+
+Read also:
 
 https://raku-advent.blog/2022/12/20/sigils/
 
