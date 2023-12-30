@@ -12,7 +12,8 @@
 * Perl Syntax
 * Live Coding
 
-# History
+# "Easy things should be easy, and hard things should be possible."
+### History
 1987 - Perl
 1995 - CPAN
 1994 - Perl 5
@@ -37,9 +38,10 @@ https://www.metacpan.org
 
 perldoc -l Dist::Module
 
-### Uninstall modules
+### Uninstall modules OR Reinstall 
 
 cpanm --uninstall Dist::Module
+cpan > force install Dist::Module
 
 # metacpan.org
 * check availability of perl modules
@@ -98,6 +100,16 @@ $ perl -ne 'print if !m#/home/ram/#' paths.txt
 ---
 taken from https://learnbyexample.github.io/learn_perl_oneliners/line-processing.html
 
+# two ways of commenting
+* hash sign #
+
+* 
+```perl
+=pod 
+This is a comment.
+=cut
+```
+
 # "Context"
 ``` perl
 my @arr = (1, 3, 2);
@@ -149,5 +161,7 @@ https://raku-advent.blog/2022/12/20/sigils/
 # Live Coding
 
 # END
+
+"The problem with being consistent is that there are lots of ways to be consistent, and they're all inconsistent with each other." -- Larry Wall
 
 Thank you!!!

@@ -1,8 +1,9 @@
 use v5.30.0;
 use warnings;
 use List::Util qw/all min max/;
+use experimental 'switch';
 
-open FH , '<', 'aoc_day2.txt';
+open "FH" , '<', 'aoc_day2.txt' or die "cannot find\n";
 my @arr;
 while (<FH>) {
     chomp;
@@ -16,6 +17,14 @@ while (<FH>) {
 sub process {
     my $result = $_[0];
     my $plain = {"G"=>0,"R"=>0,"B"=>0};
+
+
+    given($result) {
+        when(/(\d+) green/) {$plain->{"G"}=$1; continue;}
+        when(/(\d+) red/) {$plain->{"R"}=$1; continue;}
+        when(/(\d+) blue/) {$plain->{"B"}=$1;}
+    }
+=pod
     if ($result =~ /(\d+) green/) {
         $plain->{"G"}=$1;
     }
@@ -25,6 +34,9 @@ sub process {
     if ($result =~ /(\d+) blue/) {
         $plain->{"B"}=$1;
     }
+=cut
+
+
     return $plain;
 }
 

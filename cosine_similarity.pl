@@ -28,5 +28,5 @@ sub get_cos_sim {
 for (1..500) { 
     push @$a, rand(1000)-500 for (1..100);
     push @$b, rand(1000)-500 for (1..100);
-    get_cos_sim(100, $a, $b);
+    say get_cos_sim(100, $a, $b);
 }
